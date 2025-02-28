@@ -1,0 +1,22 @@
+@use "../../../common/variables" as *;
+@use "../../../common/responsive" as *;
+
+.table {
+  margin-top: 2em;
+  width: 80%;
+  text-align: center;
+  > thead {
+    > tr {
+        height: 4em;
+      border-bottom: 1px solid black;
+    }
+  }
+  > tbody {
+    height: 25em;
+    > tr {
+        > td {
+            height: 3em;
+        }
+    }
+  }
+}

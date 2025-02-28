@@ -1,0 +1,9 @@
+@use "../../../common/variables" as *;
+
+.wrapper {
+    border: 1px solid $bg-color;
+    padding: 0.5em;
+    > label {
+        font-weight: 600;
+    }
+}

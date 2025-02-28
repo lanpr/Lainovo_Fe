@@ -1,0 +1,32 @@
+
+# @name getAll
+GET http://localhost:3000/api/categories
+
+###
+
+# @name getProduct
+GET http://localhost:3000/api/products?categoryId=1
+
+###
+
+# @name addNew
+POST http://localhost:3000/api/categories
+Content-Type: application/json
+
+{
+    "name": "Ecchi"
+}
+
+###
+
+# @name update
+PATCH http://localhost:3000/api/categories/2
+Content-Type: application/json
+
+{
+    "name": "Harem"
+}
+###
+
+# @name remote
+DELETE  http://localhost:3000/api/categories/2

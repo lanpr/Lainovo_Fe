@@ -1,0 +1,51 @@
+@use "../../../../common/variables" as *;
+
+.container {
+  // border: $border-2px-black;
+  // height: $height-full;
+  border-radius: $bd-radius-8px;
+  box-shadow: $box-shadow-4px;
+  border-radius: $bd-radius-10px;
+  height: 40em;
+  .title {
+    margin-left: $margin-left-20px;
+  }
+  .wrapper {
+    @include flex-column(column);
+    .title {
+      @include apply-font(bold-larger);
+      font-size: $font-size-30px;
+    }
+    .inputField {
+      @include flex-column(row);
+      justify-content: center;
+      .left {
+        @include flex-column(column);
+        gap: $gap-value-40px;
+        width: 70%;
+        padding: $padding-30px;
+        .error {
+          background-color: red;
+        }
+        .mapField {
+          @include flex-column(column);
+          gap: 4em;
+        }
+        @media (max-width: 768px) {
+          margin: $margin-auto;
+        }
+      }
+      
+      .right {
+        @include flex-column(column);
+        gap: $gap-value-40px;
+        width: $width-40;
+        padding: $padding-30px;
+        .mapField {
+          @include flex-column(column);
+          gap: $gap-value-40px;
+        }
+      }
+    }
+  }
+}

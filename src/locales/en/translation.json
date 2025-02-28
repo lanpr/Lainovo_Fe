@@ -1,0 +1,8 @@
+{
+  "title": "Welcome",
+  "paragraph": "Demo",
+  "button": {
+      "login": "Login",
+      "SignUp": "Sign Up"
+  }
+}

@@ -1,0 +1,42 @@
+@use "../../../../common/variables" as *;
+@use "../../../../common/responsive" as *;
+
+.registerWrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg-btn-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > .registerForm {
+    width: 20em;
+    background-color: $bg-color;
+    padding: 1.5em;
+    border-radius: 5px;
+    > p {
+      text-align: center;
+      font-size: xx-large;
+      margin-bottom: 1em;
+      color: $bg-btn-color;
+    }
+    > form {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5em;
+      margin-bottom: 0.7em;
+    }
+    > p:nth-child(4) {
+      font-size: small;
+    }
+    > .registerButton {
+      display: flex;
+      column-gap: 0.5em;
+    }
+  }
+}
+.errorMessage {
+  color: #eb233e;
+  font-size: small;
+  text-decoration: none;
+  padding-bottom: 1px;
+}

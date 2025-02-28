@@ -1,0 +1,11 @@
+@use "../../../common/responsive" as *;
+@use "../../../common/variables" as *;
+
+.search_filter {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    gap: 0.5em;
+    position: relative;
+    margin: 0 auto 3em auto;
+}

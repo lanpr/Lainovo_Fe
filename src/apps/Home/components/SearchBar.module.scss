@@ -1,0 +1,21 @@
+@use "../../../common/variables" as *;
+@use "../../../common/responsive" as *;
+
+.searchBarWrapper {
+  > div {
+    width: 100%;
+    > input {
+      width: 100%;
+      outline: none;
+      padding: 0.5em 1em 0.5em 1em;
+      background-color: #20233a;
+      // border: 2px solid #87753d;
+      color: white;
+      border-radius: 10px;
+      &::placeholder {
+        color: white;
+        opacity: 0.8;
+      }
+    }
+  }
+}

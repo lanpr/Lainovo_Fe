@@ -1,0 +1,65 @@
+@use "../../../../common/variables" as *;
+@use "../../../../common/responsive" as *;
+
+.loginWrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: $bg-btn-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > .loginForm {
+    padding: 1.5em;
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: $bg-color;
+    > p {
+      text-align: center;
+      font-size: xx-large;
+      margin-bottom: 1em;
+      color: $bg-btn-color;
+    }
+    > form {
+      display: flex;
+      gap: 2.5em;
+      flex-direction: column;
+    }
+    > span {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      font-size: small;
+      color: $bg-btn-color;
+      > a {
+        color: $bg-btn-color;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+    .register {
+      > span {
+        color: $bg-btn-color;
+        font-size: small;
+        > a {
+          font-size: small;
+          text-decoration: none;
+          color: $bg-btn-color;
+          cursor: pointer;
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+    .errorMessage {
+      color: #eb233e;
+      font-size: small;
+      text-decoration: none;
+      padding-top: 10px;
+    }
+  }
+}

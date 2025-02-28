@@ -1,0 +1,18 @@
+@use "../../../../common/variables" as *;
+@use "../../../../common/responsive" as *;
+
+.loginButtonWrapper {
+  width: 100%;
+  > button {
+    outline: none;
+    width: 100%;
+    background-color: $bg-btn-color;
+    border-radius: 5px;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    color: white;
+    &:hover {
+      box-shadow: $box-shadow-6px;
+    }
+  }
+}

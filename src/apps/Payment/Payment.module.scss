@@ -1,0 +1,38 @@
+@use "../../common/variables" as *;
+
+.wrapper {
+  margin-top: $margin-top-50px;
+  margin-bottom: $margin-bottom-50px;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    margin: $margin-auto;
+    width: $width-90;
+    justify-content: center;
+    box-shadow: $box-shadow-6px;
+    border-radius: $bd-radius-10px;
+
+    .left {
+      width: $width-70;
+      height: $height-full;
+      margin: $margin-20px;
+      @media (max-width: 768px) {
+        width: $width-full;
+        margin: $margin-auto;
+      }
+    }
+    .right {
+      width: $width-30;
+      margin: $margin-20px;
+      @media (max-width: 768px) {
+        width: $width-full;
+        margin: $margin-auto;
+      }
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: $gap-value-20px;
+    }
+  }
+}

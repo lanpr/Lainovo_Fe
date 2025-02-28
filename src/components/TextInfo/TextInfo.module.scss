@@ -1,0 +1,13 @@
+@use "../../common/variables" as *;
+
+.container {
+  @include flex-column(row);
+  justify-content: $justify-around;
+  // align-items: $items-center;
+  .title {
+    @include apply-font(bold-larger);
+  }
+  .text {
+    font-size: $font-size-18px;
+  }
+}

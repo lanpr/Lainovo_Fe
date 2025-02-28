@@ -1,0 +1,7 @@
+@mixin col-span($span) {
+    grid-column: span $span;
+  }
+  
+  @mixin font-size($size) {
+    font-size: $size;
+  }

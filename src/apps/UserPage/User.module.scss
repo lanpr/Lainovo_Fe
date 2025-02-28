@@ -1,0 +1,57 @@
+@use "../../common/variables" as *;
+@use "../../common/responsive" as *;
+
+.wrapper {
+  margin-top: $margin-top-50px;
+  margin-bottom: $margin-bottom-50px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: $margin-auto;
+    width: $width-70;
+    justify-content: center;
+    border-radius: $bd-radius-8px;
+    box-shadow: $box-shadow-6px;
+
+    .upperContainer {
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 2em;
+      border-bottom: 1px solid black;
+      margin: 1em 1em 2em 1em;
+      gap: 2em;
+      .info {
+        width: 100%;
+      }
+      > div {
+        width: 100%;
+        .password {
+          width: 100%;
+        }
+        .address {
+          width: 100%;
+        }
+        @include break(md) {
+          display: flex;
+          gap: 1em;
+        }
+      }
+    }
+
+    .lowerContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: $margin-bottom-10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: $gap-value-20px;
+  }
+}

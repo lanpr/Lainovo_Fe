@@ -1,0 +1,96 @@
+@use "../../../common/responsive" as *;
+@use "../../../common/variables" as *;
+
+.genreWrapper {
+  width: auto;
+  min-height: 100vh;
+  .genreContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em;
+    h4 {
+      font-size: x-large;
+      font-weight: 500;
+    }
+    div {
+      //   padding: 2em 0;
+      width: 50%;
+      //   gap: 1em;
+      > .inputForm {
+        width: 100%;
+        display: flex;
+        gap: 1em;
+      }
+      > .buttonForm {
+        display: flex;
+        gap: 1em;
+        align-items: flex-start;
+      }
+    }
+    .search {
+      display: flex;
+      flex-direction: column;
+      width: 30em;
+      row-gap: 0.5em;
+      > input {
+        width: 100%;
+        outline: none;
+        padding: 0.5em 1em;
+        background-color: $bg-color;
+        border-radius: 5px;
+        color: white;
+        &::placeholder {
+          color: white;
+        }
+      }
+    }
+    .table {
+      width: 100%;
+      height: 30em;
+      overflow-y: auto;
+      position: relative;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      table {
+        max-height: 100%;
+        width: 100%;
+        border: 1px solid black;
+        thead {
+          position: sticky;
+          top: 0;
+          tr {
+            height: 3em;
+            background-color: $bg-color;
+            th {
+              border: 1px solid black;
+              text-align: center;
+            }
+          }
+        }
+        tbody {
+          tr {
+            border: 1px solid black;
+            height: 2.5em;
+            &:hover {
+              background-color: $bg-hover-color;
+            }
+            td {
+              border: 1px solid black;
+              text-align: center;
+              max-height: em;
+              color: black;
+              cursor: pointer;
+              button {
+                padding: 0.2em;
+                background-color: $bg-btn-color;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@use "../../../common/responsive" as *;
+@use "../../../common/variables" as *;
+
+.aboutContainer {
+  width: 100%;
+  padding: 10em 15em 10em 15em;
+  .aboutIntroduce {
+    p {
+      font-size: 14px;
+    }
+    > p:first-child {
+      font-weight: bold;
+      font-size: large;
+      padding-bottom: 0.5em;
+      border-bottom: 1px solid black;
+      margin-bottom: 0.5em;
+    }
+    > p:nth-child(2) {
+      margin-bottom: 1em;
+      font-size: 14px;
+    }
+    > div:nth-child(3) {
+      border-bottom: 1px solid black;
+      padding-bottom: 2em;
+      > span {
+        font-weight: bold;
+        font-size: large;
+        padding-bottom: 2em;
+      }
+      > div {
+        > ul {
+          padding: 0;
+          list-style-type: disc;
+          li {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    > div:nth-child(4) {
+      > span {
+        font-weight: bold;
+        font-size: large;
+        padding-bottom: 2em;
+      }
+      
+    }
+    > div:nth-child(5) {
+      > span {
+        font-weight: bold;
+        font-size: large;
+        padding-bottom: 2em;
+      }
+      
+    }
+  }
+}

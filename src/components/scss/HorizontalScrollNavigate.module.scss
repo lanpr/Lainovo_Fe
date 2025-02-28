@@ -1,0 +1,42 @@
+@use "../../common/variables" as *;
+@use "../../common/responsive" as *;
+
+.horizontalScrollWrapper {
+  > div:first-child {
+    display: flex;
+    max-width: 14em;
+    overflow-x: hidden;
+    @include break(md) {
+      max-width: 30em;
+      column-gap: 2em;
+    }
+    @include break(lg) {
+      max-width: 46em;
+      column-gap: 2em;
+    }
+    @include break(xl) {
+      max-width: 62em;
+      column-gap: 2em;
+    }
+    @include break(xxl) {
+      max-width: 78em;
+      column-gap: 2em;
+    }
+  }
+  > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    button {
+        padding: 0.5em;
+        background-color: $bg-btn-color;
+        border-radius: 10px;
+        opacity: 0.8;
+        transition: background-color 0.3s, opacity 0.3s;
+        &:hover {
+          opacity: 1;
+            background-color: $bg-btn-color;
+        }
+    }
+  }
+}

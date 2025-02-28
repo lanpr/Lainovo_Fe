@@ -1,0 +1,55 @@
+@use "../../common/variables" as *;
+.container {
+  @include flex-column(row);
+  margin-top: 2em;
+  padding-bottom: 2em;
+  border-bottom: $border-1px-black;
+  .productField {
+    width: 70%;
+    @include flex-column(row);
+    gap: 3em;
+    .imgField {
+      max-width: 30%;
+    }
+    .infoField {
+      max-width: 70%;
+      @include flex-column(column);
+      gap: 1.2em;
+      .productTitle {
+        @include apply-font(bold-larger);
+        font-size: 1.4em;
+        overflow-wrap: break-word;
+      }
+      .productAuthor,
+      .productCategory {
+        font-size: 1.2em;
+      }
+      .productPrice {
+        margin-top: 1em;
+        @include apply-font(bold-larger);
+      }
+      .quantityField {
+        @include flex-column(row);
+        height: 2.5em;
+        .quantity {
+          @include apply-flex(center-center);
+          border: $border-1px-black;
+          width: 3em;
+        }
+        .btnQuantity {
+          width: 2em;
+          border: $border-1px-black;
+        }
+      }
+    }
+  }
+  .totalField {
+    width: 30%;
+    .total {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 1em;
+      @include apply-font(bold-larger);
+    }
+  }
+}

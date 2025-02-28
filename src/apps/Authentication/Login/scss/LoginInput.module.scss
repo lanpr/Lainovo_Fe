@@ -1,0 +1,31 @@
+@use "../../../../common/variables" as *;
+@use "../../../../common/responsive" as *;
+
+.loginInputWrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  > label {
+    position: absolute;
+    background-color: $bg-btn-color;
+    padding: 0 0.8em 0 0.8em;
+    border-radius: 5px;
+    font-size: small;
+    left: 1em;
+    top: 0;
+    transform: translateY(-50%);
+    color: white;
+    user-select: none;
+  }
+  > input {
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    padding: 0.9em;
+    font-size: 12px;
+    &::placeholder {
+      font-size: small;
+    }
+    box-shadow: $box-shadow-4px;
+  }
+}

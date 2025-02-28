@@ -1,0 +1,52 @@
+@use "../../../../common/variables" as *;
+
+.column {
+  width: $width-full;
+  // height: 25em;
+  flex: 1;
+  // margin: 20px 20px 20px 0px;
+  padding: $padding-20px;
+  border-radius: $bd-radius-8px;
+  box-shadow: $box-shadow-4px;
+  // flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    width: $width-full;
+    margin-left: $margin-left-auto;
+    margin-right: $margin-right-auto;
+  }
+}
+
+.details {
+  flex-wrap: wrap;
+  h1 {
+    color: #333;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  .line {
+    margin-top: $margin-top-10px;
+    margin-bottom: $margin-bottom-20px;
+    width: $width-full;
+    border: $border-1px-black;
+  }
+
+  p {
+    margin-top: $margin-top-10px;
+    color: #666;
+    font-size: 16px;
+
+    span {
+      font-weight: bold;
+      color: black;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: $width-full;
+    // margin-left: $margin-left-auto;
+    // margin-right: $margin-right-auto;
+    margin: $margin-auto;
+  }
+}

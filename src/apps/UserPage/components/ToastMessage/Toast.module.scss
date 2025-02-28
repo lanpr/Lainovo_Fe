@@ -1,0 +1,16 @@
+.toast {
+  position: fixed;
+  top: 20px; // Thay đổi từ 'bottom' thành 'top'
+  right: 20px;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+.success {
+  background-color: green;
+}
+
+.error {
+  background-color: red;
+}

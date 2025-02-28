@@ -1,0 +1,11 @@
+@use "../../common/variables" as *;
+
+.wrapper{
+    @include flex-column(column);
+    .input{
+        border: $border-1px-gray;
+        border-radius: 3px; 
+        text-align: $text-center;
+        height: $height-30px;
+    }
+}

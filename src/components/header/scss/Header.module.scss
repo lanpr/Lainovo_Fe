@@ -1,0 +1,146 @@
+@use "../../../common/variables" as *;
+@use "../../../common/responsive" as *;
+header {
+  height: 6em;
+  background-color: $bg-btn-color;
+  width: 100%;
+  > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em 0 2em;
+    position: relative;
+    > div:first-child {
+      a {
+        p {
+          margin: 0;
+          color: white;
+          font-weight: 500;
+          font-size: x-large;
+          cursor: pointer;
+        }
+      }
+    }
+    > div:nth-child(2) {
+      display: none;
+      > ul {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        gap: 3em;
+        li {
+          color: $bg-color;
+          font-size: large;
+          font-weight: 500;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: $bg-color;
+            transition: width 0.3s;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+          &:nth-child(2) {
+            opacity: 0.9;
+          }
+          &:nth-child(3) {
+            opacity: 0.9;
+          }
+          
+        }
+      }
+      @include break(md) {
+        display: block;
+      }
+    }
+    > div:nth-child(3) {
+      display: flex;
+      column-gap: 2em;
+      > span {
+        font-weight: 500;
+        width: 5em;
+        color: $bg-color;
+        cursor: pointer;
+        visibility: hidden;
+        @include break(md) {
+          visibility: visible;
+        }
+      }
+      div {
+        display: flex;
+        gap: 1em;
+        justify-content: center;
+        > ul {
+          height: 2em;
+          width: 5.5em;
+          border-radius: 5px;
+          // background-image: linear-gradient(to right, #827143, #937d41);
+          background-color: $bg-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+          padding: 0;
+          li {
+            width: 100%;
+            text-align: center;
+            color: $bg-btn-color;
+            font-size: large;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transfrom 0.4s;
+          }
+        }
+        > button {
+          outline: none;
+          display: flex;
+          align-items: center;
+          transition: transform 0.5s;
+          &.openMenu {
+            transform: rotate(180deg);
+          }
+          @include break(md) {
+            visibility: hidden;
+          }
+        }
+      }
+    }
+    > div:nth-child(4) {
+      height: 2em;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      transition: transform 0.4s, opacity 0.3s;
+      > div {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        button {
+          width: 3em;
+          height: 3em;
+          border-radius: 100%;
+          background-color: $bg-btn-color;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      &.buttonInSmSize {
+        transform: translateY(20%);
+        opacity: 1;
+      }
+    }
+  }
+}

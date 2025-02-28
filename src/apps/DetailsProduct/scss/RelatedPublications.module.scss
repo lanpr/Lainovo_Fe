@@ -1,0 +1,62 @@
+@use "../../../common/variables" as *;
+@use "../../../common/responsive" as *;
+
+.container {
+    margin-bottom: 5em;
+  .sameAuthorContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    h5 {
+      color: $bg-btn-color;
+      text-align: center;
+      font-size: large;
+      font-weight: bold;
+      min-width: 20em;
+      margin: 0 auto 2em auto;
+    }
+    // .sameAuthorWrapper {
+    //   display: flex;
+    //   flex-direction: column;
+    //   row-gap: 1.5em;
+    //   max-width: 14em;
+    //   overflow-x: hidden;
+    //   transition: transform 0.4s;
+    //   @include break(md) {
+    //     max-width: 30em;
+    //   }
+    //   @include break(lg) {
+    //     max-width: 46em;
+    //   }
+    //   @include break(xl) {
+    //     max-width: 62em;
+    //   }
+    //   @include break(xxl) {
+    //     max-width: 78em;
+    //   }
+    //   @include break(xxxl) {
+    //     max-width: 94em;
+    //   }
+    //   .cardWrapper {
+    //     display: flex;
+    //     justify-content: flex-start;
+    //     gap: 2em;
+    //     width: 100%;
+    //     // overflow-x: scroll;
+    //   }
+    //   .navigateButton {
+    //     position: absolute;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     width: 108em;
+    //     margin: auto;
+    //     left: 0;
+    //     right: 0;
+    //     top: 50%;
+    //   }
+    // }
+  }
+  .sameGenreContainer {
+  }
+}

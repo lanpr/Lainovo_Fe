@@ -1,0 +1,14 @@
+@use "../../../common/responsive" as *;
+@use "../../../common/variables" as *;
+
+.button {
+  background-image: linear-gradient(to right, #827143, #937d41);
+  padding: 0.5em;
+  border-radius: 5px;
+  min-width: 5em;
+  transition: background-image 0.3s;
+  color: white;
+  &:hover {
+    background-image: linear-gradient(to right, #807043, #8f7a3f);
+  }
+}

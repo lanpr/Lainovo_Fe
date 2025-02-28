@@ -1,0 +1,37 @@
+@use "../../../../common/variables" as *;
+
+.history {
+  width: $width-90;
+  margin: $margin-20px auto;
+  overflow-x: auto;
+
+  h1 {
+    font-size: $font-size-32px;
+    text-align: center;
+    margin-bottom: $margin-bottom-20px;
+  }
+
+  table {
+    width: $width-full;
+    border-collapse: collapse;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+
+    th,
+    td {
+      border: $border-1px-black;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      padding: $padding-10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: $bg-color;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: $width-95;
+    margin: $margin-10px auto;
+  }
+}

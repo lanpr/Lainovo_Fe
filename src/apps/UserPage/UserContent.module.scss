@@ -1,0 +1,19 @@
+@use "../../common/variables" as *;
+@use "../../common/responsive" as *;
+
+.container {
+  width: 100%;
+  .userInfo {
+    padding: 0px 3em 0px 3em;
+    > p {
+      font-size: x-large;
+    }
+    > p:nth-child(2) {
+      font-size: medium;
+    }
+  }
+  > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+  }
+}

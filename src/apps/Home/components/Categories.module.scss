@@ -1,0 +1,71 @@
+@use "../../../common/variables" as *;
+@use "../../../common/responsive" as *;
+
+.categoriesWrapper {
+  display: flex;
+  justify-content: flex-end;
+  > button {
+    height: 2.5em;
+    background-color: #20233a;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5em 0 0.5em;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: white;
+    gap: 0.3em;
+    outline: none;
+    opacity: 0.8;
+    transition: background-color 0.3s, opacity 0.3s;
+    &:hover {
+      opacity: 1;
+      background-color: #20233a;
+    }
+    &.active {
+      opacity: 1;
+      background-color: #20233a;
+    }
+  }
+  > div {
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    right: 0;
+    width: 100%;
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 1em;
+      background-color: #20233a;
+      border-radius: 10px;
+      max-width: 100%;
+      max-height: 72em;
+      box-sizing: border-box;
+      row-gap: 1em;
+      button {
+        background-color: #20233a;
+        width: calc(100% / 2);
+        padding: 0.2em 0.4em 0.2em 0.4em;
+        border-radius: 7px;
+        color: white;
+        transition: background-color 0.3s;
+        @include break(md) {
+          width: calc(100% / 3);
+        }
+        @include break(xl) {
+          width: calc(100% / 4);
+        }
+        &:hover {
+          background-color: #87753d;
+          color: white;
+          // border: 1px solid $bg-color;
+        }
+        &.isSelected {
+          background-color: #87753d;
+          color: white;
+          // border: 1px solid #87753d;
+        }
+      }
+    }
+  }
+}

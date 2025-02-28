@@ -1,0 +1,57 @@
+@use "../../../../common/variables" as *;
+
+.addressForm {
+  flex: 1;
+  height: 36em;
+  width: $width-full;
+  padding: $padding-20px;
+  border-radius: $bd-radius-8px;
+  box-shadow: $box-shadow-4px;
+  flex-wrap: wrap;
+
+  h2 {
+    font-size: $font-size-24px;
+    font-weight: bold;
+    margin-bottom: $margin-bottom-20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: $font-size-16px;
+      margin-bottom: $margin-bottom-10px;
+
+      input {
+        width: $width-full;
+        padding: $padding-10px;
+        border-radius: $bd-radius-5px;
+        border: $border-1px-light-grey;
+        margin-bottom: $margin-bottom-20px;
+      }
+    }
+
+    button {
+      margin-top: 15px;
+      width: $width-20;
+      padding: $padding-5px;
+      background-color: $bg-color-green-400;
+      border-radius: $bd-radius-8px;
+      box-shadow: $box-shadow-4px;
+      font-weight: bold;
+      align-self: flex-end;
+      flex-wrap: wrap;
+
+      @media (max-width: 768px) {
+        width: $width-full;
+        margin: $margin-auto;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: $width-full;
+    margin: $margin-auto;
+  }
+}

@@ -1,0 +1,101 @@
+@use "../../common/variables" as *;
+@use "../../common/responsive" as *;
+
+.footerWrapper {
+  background-color: #20233a;
+  padding: 2em 1em;
+  h1 {
+    color: white;
+  }
+  .infoWrapper {
+    @include break(lg) {
+      display: flex;
+      justify-content: space-between;
+    }
+    .footerInfomation {
+      border-bottom: 1px solid #87753d;
+      padding-bottom: 1em;
+      @include break(lg) {
+        border: none;
+        padding: 0;
+      }
+      > div {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        span {
+          column-gap: 0.5em;
+          display: flex;
+          color: white;
+          align-items: center;
+        }
+      }
+    }
+    .footerSupportAndPolicy {
+      display: flex;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      justify-content: space-between;
+      border-bottom: 1px solid #87753d;
+      @include break(lg) {
+        border: none;
+        padding: 0;
+        justify-content: space-between;
+        width: 35em;
+      }
+      #footerSupport {
+        span {
+          color: white;
+          font-weight: 500;
+        }
+        ul {
+          padding: 0;
+          margin: 0;
+          li {
+            color: white;
+            cursor: pointer;
+            transition: color 0.3s;
+            &:hover {
+              color: #87753d;
+            }
+          }
+        }
+      }
+      #footerPolicy {
+        span {
+          color: white;
+          font-weight: 500;
+        }
+        ul {
+          padding: 0;
+          margin: 0;
+          li {
+            color: white;
+            cursor: pointer;
+            transition: color 0.3s;
+            &:hover {
+              color: #87753d;
+            }
+          }
+        }
+      }
+      #footerMediaSocial {
+        display: none;
+      }
+    }
+    .footerContactMedia {
+      span {
+        color: white;
+        font-weight: 500;
+      }
+      div {
+        ul {
+          display: flex;
+          padding: 0.5em 0;
+          margin: 0;
+          gap: 1.5em;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use "../../../common/responsive" as *;
+@use "../../../common/variables" as *;
+
+.introduceContainer {
+    width: 14em;
+    height: 5em;
+    border: 1px solid $bg-color;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    color: $bg-color;
+    justify-content: space-around;
+    padding: 0 0.4em 0 0.4em;
+    > span {
+        font-size: large;
+        font-weight: 500;
+        text-align: center;
+    }
+}

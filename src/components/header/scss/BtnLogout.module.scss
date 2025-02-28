@@ -1,0 +1,13 @@
+@use "../../../common/variables" as *;
+@use "../../../common/responsive" as *;
+.btnLogoutWrapper {
+  display: flex;
+  height: 100%;
+  gap: 0.5em;
+  > button {
+    > span {
+      font-size: large;
+    font-weight: 500;
+    }
+  }
+}

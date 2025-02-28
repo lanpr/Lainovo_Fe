@@ -1,0 +1,11 @@
+@use "../../common/variables" as *;
+
+.title {
+  width: $width-full;
+  //   border: $border-1px-gray;
+  height: $height-50px;
+  border-radius: $bd-radius-10px;
+  @include apply-flex(center-center);
+  @include apply-font(bold-larger);
+  //   background-color: $bg-color-green-400;
+}

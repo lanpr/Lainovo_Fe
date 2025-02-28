@@ -1,0 +1,28 @@
+@use "../../common/variables" as *;
+
+.container {
+  @include flex-column(row);
+  margin: $margin-10px;
+  margin-top: $margin-top-50px;
+  border-bottom: $border-bottom-2px-black;
+  padding-bottom: 2em;
+  .imgField {
+    width: $width-40;
+    @include apply-flex(center-center);
+    .img {
+      width: 50%;
+    }
+  }
+  .textField {
+    width: $width-60;
+    @include flex-column(column);
+    justify-content: $justify-around;
+    .productName {
+      @include apply-font(bold-medium);
+      font-size: $font-size-20px;
+    }
+    .productPrice {
+      @include apply-font(bold-medium);
+    }
+  }
+}

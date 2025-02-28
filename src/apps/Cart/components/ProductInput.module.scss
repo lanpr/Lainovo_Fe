@@ -1,0 +1,47 @@
+@use "../../../common/variables" as *;
+@import "mixins.scss";
+
+.container {
+  margin: auto;
+  padding: 1rem;
+}
+.titleLeft {
+  @include col-span(2);
+  margin: 0 1.5rem;
+}
+.font {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #000;
+}
+
+.fontA {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding-left: 1.25cm;
+  @include font-size(1.5rem);
+}
+
+.fontB {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding-right: 1.25cm;
+  @include font-size(1.5rem);
+}
+
+.titleRight {
+  @apply col-span-1 mx-6;
+}
+.fontC {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+.table {
+  overflow-y: auto;
+  max-height: 45em;
+
+  &::-webkit-scrollbar {
+    width: 0em;
+  }
+}

@@ -1,0 +1,24 @@
+@use "../../../../common/variables" as *;
+
+.container {
+  .btnField {
+    padding: 2em;
+    .btn {
+      padding-bottom: $padding-bottom-30px;
+      background-color: $bg-color;
+      color: white;
+    }
+    .btnHidden {
+      background-color: #6b5d31;
+      pointer-events: none;
+      color: white;
+    }
+  }
+
+  .text {
+    margin-bottom: $margin-10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}

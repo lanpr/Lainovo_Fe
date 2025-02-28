@@ -1,0 +1,17 @@
+@use "../../../../common/variables" as *;
+@use "../../../../common/responsive" as *;
+
+.otpInputWrapper {
+  > input {
+    text-align: center;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    padding: 0.9em;
+    font-size: 12px;
+    &::placeholder {
+      font-size: small;
+    }
+    box-shadow: $box-shadow-4px;
+  }
+}

@@ -1,0 +1,20 @@
+// ProductList.module.scss
+@use "../../../common/variables" as *;
+
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+
+  .productField {
+    width: $width-full;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .productList {
+    font-size: 0.6em;
+  }
+}

@@ -1,0 +1,30 @@
+@use "../../../../common/variables" as *;
+
+.container {
+  .btn {
+    margin: $margin-20px;
+    // margin-bottom: 40px;
+    padding-bottom: $padding-bottom-30px;
+  }
+
+  .text {
+    margin-bottom: $margin-10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .input {
+    margin-top: 0.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; 
+    width:100%;
+    outline: none;
+    border-width: 1px;
+    border-color: #d1d5db;
+    border-radius: 0.5rem;
+    text-align: center;
+   
+  }
+}

@@ -1,0 +1,23 @@
+@use "../../../../common/variables" as *;
+
+.container {
+  // border: $border-2px-black;
+  border-radius: $bd-radius-8px;
+  box-shadow: $box-shadow-4px;
+  border-radius: $bd-radius-10px;
+  height: $width-full;
+  .title {
+    // margin: $margin-top-20px;
+    margin-right: $margin-right-20px;
+  }
+  .productField {
+    overflow-y: auto;
+    max-height: 24em;
+    &::-webkit-scrollbar {
+      width: 0em;
+    }
+  }
+  .TotalPayment {
+    margin-top: 1em;
+  }
+}

@@ -1,0 +1,74 @@
+@use "../../../common/responsive" as *;
+@use "../../../common/variables" as *;
+
+.aboveContainer {
+  padding-top: 5em;
+  padding-bottom: 5em;
+  .introduce {
+    display: flex;
+    width: 29em;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+    gap: 1em;
+    margin: auto;
+    @include break(lg) {
+      width: 59em;
+    }
+  }
+  .selectionWrapper {
+    padding-top: 3em;
+    display: flex;
+    width: 10em;
+    margin: auto;
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 16em;
+      li {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        font-size: medium;
+        font-weight: 500;
+        color: $bg-btn-color;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: $bg-btn-color;
+          transition: width 0.3s;
+        }
+        &:hover::after,
+        &.active::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .abovePublicationsContainer {
+    background-color: #f0f0f0;
+    padding-top: 1.5em;
+    max-width: 26em;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 2em;
+    @include break(md) {
+      max-width: 40em;
+    }
+    @include break(lg) {
+      max-width: 56em;
+    }
+    @include break(xl) {
+      max-width: 70em;
+    }
+    @include break(xxl) {
+      max-width: 82em;
+    }
+  }
+}
